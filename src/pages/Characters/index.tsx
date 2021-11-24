@@ -1,7 +1,6 @@
-import React, { ReactElement, useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import api from '../../services/api';
-import { Container, CardList, Card } from './styles'
-
+import { Container, CardList, Card, Button } from './styles'
 interface ResponseData {
   id: string;
   name:string;
@@ -25,6 +24,22 @@ const Characters: React.FC = () => {
     .catch(err => console.log(err));
  },[]);
 
+ const moreCharacters = useCallback(async () => {
+   try {
+    const offset = characters.length;
+    const response = await api.get('characters', {
+      params: {
+        offset,
+      },
+    });
+    setCharacters([...characters, ...response.data.data.results])
+ }
+ catch(err) {
+   console.log(err);
+
+}
+}, [characters]);
+
   return (
   <Container>
     <CardList>
@@ -42,6 +57,9 @@ const Characters: React.FC = () => {
       )
     })}
     </CardList>
+    <Button onClick={moreCharacters}>
+    MAIS  
+    </Button> 
     
  
   </Container>)

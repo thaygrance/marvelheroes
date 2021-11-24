@@ -55,3 +55,23 @@ div#img {
     }
   }
 `;
+
+export const Button = styled.button`
+  
+  background: lightblue;
+  cursor: pointer;
+  padding: 20px 100px;
+  margin: auto;
+  margin-top:30px;
+  margin-bottom:30px;
+  box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.3);
+  border: 2px darkred solid;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 24px;
+
+  &:hover {
+    background-color: darkblue;
+    color:white;
+  }
+`;
