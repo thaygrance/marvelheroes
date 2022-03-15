@@ -3,7 +3,8 @@
 Após semanas estudando React JS e tentando "juntar" as funcionalidades e me familiarizar com sua arquitetura, encontrei esse tutorial exemplificando a utilização do React com TypeScript e consumindo a sensacional api da Marvel. É uma aplicação relativamente simples, mas, foi a primeira que fiz. 
 
 
-<img align="center" alt="Gig página" width="500" src"Gravação de tela de 24-11-2021 16_23_22.gif">
+<img align="center" alt="Gif página" width="500" src="Gravação de tela de 24-11-2021 16_23_22.gif">
+
 
 # 
 Esse é o link do tutorial do YouTube que segui para construir essa aplicação:
